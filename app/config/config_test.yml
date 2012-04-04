@@ -1,0 +1,25 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.filesystem
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+mink:
+    base_url: %TEST_DOMAIN%
+    javascript_session: sahi
+    sahi: ~
+
+    #javascript_session: selenium
+    #selenium: ~
+
+    browser_name: chrome
+    show_cmd: C:\Users\qwerty\AppData\Local\Google\Chrome\Application\chrome.exe %s

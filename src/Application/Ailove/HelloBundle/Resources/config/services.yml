@@ -1,0 +1,7 @@
+parameters:
+#    hello.example.class: Application\Ailove\HelloBundle\Example
+
+services:
+#    hello.example:
+#        class: %hello.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

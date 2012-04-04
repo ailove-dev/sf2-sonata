@@ -1,0 +1,38 @@
+AddDefaultCharset utf-8
+
+Options -Indexes -MultiViews +FollowSymLinks
+
+php_value date.timezone Europe/Moscow
+
+php_flag magic_quotes_gpc off
+php_flag magic_quotes_runtime off
+
+php_flag register_globals off
+php_flag register_long_arrays off
+
+php_flag apc.cache_by_default Off
+
+php_flag file_uploads on
+php_value post_max_size 120M
+php_value upload_max_filesize 100M
+
+php_value default_charset "utf-8"
+php_value mbstring.internal_encoding "utf-8"
+
+php_value iconv.input_encoding "utf-8"
+php_value iconv.internal_encoding "utf-8"
+php_value iconv.output_encoding "utf-8"
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+#    # For delete closure slash in end string request
+#    RewriteCond %{HTTPS} =on
+#    RewriteRule ^([^admin].+)/$ https://%{HTTP_HOST}/$1 [R=301,L,QSA]
+#    
+#    RewriteCond %{HTTPS} =off
+#    RewriteRule ^([^admin].+)/$ http://%{HTTP_HOST}/$1 [R=301,L,QSA]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app.php [QSA,L]
+</IfModule>

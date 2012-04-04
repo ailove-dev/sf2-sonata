@@ -25,6 +25,35 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
+            // KNP HELPER BUNDLES
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+
+            // USER
+            new FOS\UserBundle\FOSUserBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+
+            // NEWS
+            new Sonata\NewsBundle\SonataNewsBundle(),
+            new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
+
+            // MEDIA
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            // new Liip\ImagineBundle\LiipImagineBundle(),
+
+            // SONATA CORE & HELPER BUNDLES
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\FormatterBundle\SonataFormatterBundle(),
+            new Sonata\CacheBundle\SonataCacheBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\SeoBundle\SonataSeoBundle(),
+
             // Application - Ailove world!
             new Application\Ailove\HelloBundle\HelloBundle(),
         );

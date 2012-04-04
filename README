@@ -6,4 +6,9 @@ cd repo/branch/
 ./bin/chcache
 git init
 ./bin/vendors install
+createdb -h 127.0.0.1 sf2sonata
+app/console doctrine:schema:create
+app/console fos:user:create admin admin@admin.com admin
+app/console fos:user:promote admin ROLE_ADMIN
+
 php app/console --env=test behat

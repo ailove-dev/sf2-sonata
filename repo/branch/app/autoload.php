@@ -23,12 +23,29 @@ $loader->registerNamespaces(array(
     'Sensio'            => __DIR__.'/../vendor/bundles',
     'JMS'               => __DIR__.'/../vendor/bundles',
     'Doctrine\\Bundle'                => __DIR__.'/../vendor/bundles',
+    'Doctrine\\DBAL\\Migrations'      => __DIR__.'/../vendor/doctrine-migrations/lib',
+    'Doctrine\\Common\\DataFixtures'  => __DIR__.'/../vendor/doctrine-data-fixtures/lib',
     'Doctrine\\Common'                => __DIR__.'/../vendor/doctrine-common/lib',
     'Doctrine\\DBAL'                  => __DIR__.'/../vendor/doctrine-dbal/lib',
     'Doctrine\\ORM'                   => __DIR__.'/../vendor/doctrine/lib',
     'Monolog'           => __DIR__.'/../vendor/monolog/src',
     'Assetic'           => __DIR__.'/../vendor/assetic/src',
     'Metadata'          => __DIR__.'/../vendor/metadata/src',
+    'FOS'               => __DIR__.'/../vendor/bundles',
+    'Knp'               => array(
+        __DIR__.'/../vendor/bundles',
+        __DIR__.'/../vendor/knp/menu/src'
+    ),
+    'Sonata'            => array(
+        __DIR__.'/../vendor/sonata/src',
+        __DIR__.'/../vendor/bundles',
+        __DIR__.'/../src',
+        __DIR__.'/../vendor/sonata-doctrine-extensions/src'
+    ),
+    'Imagine'           => __DIR__.'/../vendor/imagine/lib',
+    'Gaufrette'         => __DIR__.'/../vendor/gaufrette/src',
+    'Exporter'          => __DIR__.'/../vendor/exporter/lib',
+    'Application'       => __DIR__.'/../src',
 
     //Tests
     'Behat\Mink'        => __DIR__.'/../vendor/behat/mink/src',

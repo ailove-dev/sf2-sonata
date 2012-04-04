@@ -2,3 +2,7 @@ cd path_to_dir
 git clone https://github.com/ailove-dev/sf2-sonata.git ./
 rm -rf .git
 cp conf/database.dist conf/database
+cd repo/branch/
+./bin/chcache
+git init
+./bin/vendors install

@@ -6,3 +6,4 @@ cd repo/branch/
 ./bin/chcache
 git init
 ./bin/vendors install
+php app/console --env=test behat

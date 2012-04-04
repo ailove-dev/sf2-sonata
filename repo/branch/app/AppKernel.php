@@ -8,7 +8,7 @@ class AppKernel extends Kernel
     public function init()
     {
         umask(0002);
-        
+        ini_set('date.timezone', 'Europe/Moscow');
         parent::init();
     }
     
@@ -77,13 +77,20 @@ class AppKernel extends Kernel
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
     
-    public function getCacheDir()
-    {
-        return realpath($this->rootDir . '/../../../cache/') . '/' . $this->environment;
-    }
-    
     public function getLogDir()
     {
         return realpath($this->rootDir.'/../../../tmp/') . '/logs';
     }    
+
+    public function getCacheDir()
+    {
+        $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'sf2-sonata.local';
+        return realpath($this->rootDir . '/../../../cache/') . '/' . $host . '/' . $this->environment;
+    }
+
+    public function getTmpDir()
+    {
+        return realpath($this->rootDir . '/../../../tmp/');
+    }
+
 }

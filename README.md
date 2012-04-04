@@ -3,6 +3,8 @@
 
 Этот документ содержит информацию о том, как загрузить и начать использовать Symfony 2 в окружении Ailove Factory.
 
+* **Все команды одним списком** ([documentation](https://github.com/ailove-dev/sf2-sonata/blob/master/README))
+
 1) Загрузка
 --------------------------------
 
@@ -18,8 +20,8 @@
 
 Выполните в консоли следующие команды:
 
-    cd path_to_dir
-    git clone https://github.com/ailove-dev/sf2-base.git ./
+    cd sf2-sonata 
+    git clone https://github.com/ailove-dev/sf2-sonata.git ./
     rm -rf .git
 
 2) Установка
@@ -34,26 +36,49 @@
 
 Если вы получаете предупреждения или рекомендации, исправьте их перед тем как продолжить.
 
-### b) Установите библиотеки вендоров
+### b) Создайте конфигурационный файл БД
 
+    cp conf/database.dist conf/database
+
+### с) Исправьте права для директорий кэша и логов
+
+    cd repo/branch/
+    ./bin/chcache
+
+### d) Установите библиотеки вендоров
+
+    git init
     php bin/vendors install
 
 Примечание: у вас **должен** быть установлен **git**, т.к. при установке будут выполняться `git` команды.
 
-### c) Доступ к приложению из браузера
+### e) Создайте БД и аккаунт администратора
+
+В случае использования PostrgeSQL:
+
+    createdb -h 127.0.0.1 sf2sonata
+    app/console doctrine:schema:create
+    app/console fos:user:create admin admin@admin.com admin
+    app/console fos:user:promote admin ROLE_ADMIN
+
+### f) Доступ к приложению из браузера
 
 Проверить состояние приложения можно по ссылке:
 
-    http://virtual_host.lo/config.php
+    http://sf2-sonata.local/config.php
 
 Если все хорошо, перейдите по ссылке "Bypass configuration and go to the Welcome page", чтобы загрузить первую страницу Symfony.
 
 
 Вы так же можете увидеть реальный пример рабочей страницы:
 
-    http://virtual_host.lo/app_dev.php
+    http://sf2-sonata.local/app_dev.php
 
-3) Запуск базового теста
+Административный интерфейс:
+
+    http://sf2-sonata.local/admin/dashboard
+
+### g) Запуск базового теста
 
     php app/console --env=test behat
 
@@ -88,3 +113,15 @@ Bundles:
 * **Gherkin**
 * **Behat**
 * **HelloBundle**
+* **imagine**
+* **KnpMenu**
+* **KnpMenuBundle**
+* **KnpMarkdownBundle**
+* **FOSUserBundle**
+* **SonatajQueryBundle**
+* **SonataAdminBundle**
+* **SonataDoctrineORMAdminBundle**
+* **SonataEasyExtendsBundle**
+* **SonataMediaBundle**
+* **SonataCacheBundle**
+* **SonataBlockBundle**

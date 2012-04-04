@@ -91,3 +91,90 @@
 [Behat]
     git=https://github.com/Behat/Behat.git
     target=/behat/Behat
+
+[imagine]
+    git=git://github.com/avalanche123/Imagine.git
+    target=/imagine
+
+[KnpMenu]
+    git=git://github.com/KnpLabs/KnpMenu.git
+    target=/knp/menu
+
+[KnpMenuBundle]
+    git=git://github.com/KnpLabs/KnpMenuBundle.git
+    target=/bundles/Knp/Bundle/MenuBundle
+
+[KnpMarkdownBundle]
+    git=git://github.com/KnpLabs/KnpMarkdownBundle.git
+    target=/bundles/Knp/Bundle/MarkdownBundle
+
+[FOSUserBundle]
+    git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=/bundles/FOS/UserBundle
+
+[SonatajQueryBundle]
+    git=git://github.com/sonata-project/SonatajQueryBundle.git
+    target=/bundles/Sonata/jQueryBundle
+
+[SonataAdminBundle]
+    git=git://github.com/sonata-project/SonataAdminBundle.git
+    target=/bundles/Sonata/AdminBundle
+    version=origin/2.0
+
+[SonataDoctrineORMAdminBundle]
+    git=git://github.com/sonata-project/SonataDoctrineORMAdminBundle.git
+    target=/bundles/Sonata/DoctrineORMAdminBundle
+    version=origin/2.0
+
+[SonataEasyExtendsBundle]
+    git=git://github.com/sonata-project/SonataEasyExtendsBundle.git
+    target=/bundles/Sonata/EasyExtendsBundle
+
+[SonataMediaBundle]
+    git=git://github.com/sonata-project/SonataMediaBundle.git
+    target=/bundles/Sonata/MediaBundle
+    version=origin/2.0
+
+[SonataCacheBundle]
+    git=git://github.com/sonata-project/SonataCacheBundle.git
+    target=/bundles/Sonata/CacheBundle
+
+[SonataBlockBundle]
+    git=git://github.com/sonata-project/SonataBlockBundle.git
+    target=/bundles/Sonata/BlockBundle
+
+[SonataIntlBundle]
+    git=git://github.com/sonata-project/SonataIntlBundle.git
+    target=/bundles/Sonata/IntlBundle
+
+[SonataSeoBundle]
+    git=git://github.com/sonata-project/SonataSeoBundle.git
+    target=/bundles/Sonata/SeoBundle
+
+[SonataNewsBundle]
+    git=git://github.com/sonata-project/SonataNewsBundle.git
+    target=/bundles/Sonata/NewsBundle
+
+[SonataUserBundle]
+    git=git://github.com/sonata-project/SonataUserBundle.git
+    target=/bundles/Sonata/UserBundle
+
+[SonataFormatterBundle]
+    git=git://github.com/sonata-project/SonataFormatterBundle.git
+    target=/bundles/Sonata/FormatterBundle
+
+[gaufrette]
+    git=git://github.com/sonata-project/Gaufrette.git
+    target=/gaufrette
+
+[buzz]
+    git=git://github.com/kriswallsmith/Buzz.git
+    target=/buzz
+
+[SonataDoctrineExtensions]
+    git=git://github.com/sonata-project/sonata-doctrine-extensions.git
+    target=/sonata-doctrine-extensions
+
+[Exporter]
+    git=git://github.com/sonata-project/exporter.git
+    target=/exporter

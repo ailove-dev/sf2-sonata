@@ -63,6 +63,19 @@
 
 ### f) Доступ к приложению из браузера
 
+Виртуальный хост apache
+
+    <VirtualHost *:80>
+        DocumentRoot "/Users/user/Sites/sf2-sonata/repo/branch/htdocs"
+        ServerName sf2-sonata.local
+        ErrorLog "/private/var/log/apache2/sf2-sonata.local-error_log"
+        CustomLog "/private/var/log/apache2/sf2-sonata.local-access_log" common
+    </VirtualHost>
+
+/etc/hosts
+
+    127.0.0.1    sf2-sonata.local
+
 Проверить состояние приложения можно по ссылке:
 
     http://sf2-sonata.local/config.php
@@ -125,3 +138,4 @@ Bundles:
 * **SonataMediaBundle**
 * **SonataCacheBundle**
 * **SonataBlockBundle**
+* **FormTypesBundle** ([documentation])(https://github.com/ailove-dev/FormTypesBundle/blob/master/README.md)

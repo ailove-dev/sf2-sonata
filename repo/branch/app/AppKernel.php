@@ -54,6 +54,8 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\SeoBundle\SonataSeoBundle(),
 
+            new Ailove\FormTypesBundle\AiloveFormTypesBundle(),
+
             // Application - Ailove world!
             new Application\Ailove\HelloBundle\HelloBundle(),
         );

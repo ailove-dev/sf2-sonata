@@ -178,3 +178,7 @@
 [Exporter]
     git=git://github.com/sonata-project/exporter.git
     target=/exporter
+
+[FormTypesBundle]
+    git=git://github.com/ailove-dev/FormTypesBundle.git
+    target=/bundles/Ailove/FormTypesBundle

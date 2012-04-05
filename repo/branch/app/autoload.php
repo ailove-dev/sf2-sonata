@@ -46,6 +46,7 @@ $loader->registerNamespaces(array(
     'Gaufrette'         => __DIR__.'/../vendor/gaufrette/src',
     'Exporter'          => __DIR__.'/../vendor/exporter/lib',
     'Application'       => __DIR__.'/../src',
+    'Ailove'            => __DIR__.'/../vendor/bundles',
 
     //Tests
     'Behat\Mink'        => __DIR__.'/../vendor/behat/mink/src',

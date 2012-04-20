@@ -139,3 +139,4 @@ Bundles:
 * **SonataCacheBundle**
 * **SonataBlockBundle**
 * **FormTypesBundle** ([documentation](https://github.com/ailove-dev/FormTypesBundle/blob/master/README.md))
+* **DoctrineMigrationsBundle**
